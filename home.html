@@ -27,6 +27,13 @@
             .hide {
                 display: none;
             }
+
+            hr {
+                display:block;
+                border:0px;
+                height:10px;
+                background-image:url('./img/linha.png');
+            }
         </style>
 
         <script type="text/javascript">
@@ -42,19 +49,44 @@
     <body>
 
             
-
+        <!-- Menu -->
         <div class="w3-top">
-            <div class="w3-bar w3-flat-wet-asphalt">
-                <a href="#" class="w3-bar-item w3-button w3-padding-large"><i class="material-icons">home</i> Home</a>  
+            <div class="w3-bar w3-flat-wet-asphalt w3-card-4 w3-Montserrat" style="font-weight: bold; text-transform:uppercase">
+                    <!-- <i class="material-icons">home</i> -->
+                <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>  
                 <a href="#" class="w3-bar-item w3-button w3-padding-large" 
                 onclick="document.getElementById('cadastrar').style.display='block'">Cadastre-se</a> 
                 <a href="#" class="w3-bar-item w3-button w3-padding-large" 
                 onclick="document.getElementById('entrar').style.display='block'">Entre</a>
-                <a href="#" class="w3-bar-item w3-button w3-circle w3-right w3-padding-large"><i class="material-icons">search</i></a>
-                <input type="text" class="w3-bar-item w3-input w3-round-xxlarge w3-right" placeholder="Buscar">  
+                <a href="#" class="w3-bar-item w3-button w3-padding-large">Sobre Nós</a> 
+                <div class="w3-dropdown-hover w3-Montserrat">
+                    <button class="w3-padding-large w3-button" title="Mais" style="font-weight: bold; text-transform:uppercase">
+                        Mais <i class="fa fa-caret-down"></i></button>     
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a href="#localizacao" class="w3-bar-item w3-button">Localização</a>
+                        <a href="#social" class="w3-bar-item w3-button">Nossas Redes Sociais</a>
+                        <a href="#contate" class="w3-bar-item w3-button">Contate-nos</a>
+                    </div>
+                </div>
+                  
+                <a href="#" class="w3-bar-item w3-button w3-right w3-padding-large"><i class="material-icons">search</i></a>
+                <!-- <input type="text" class="w3-bar-item w3-input w3-round-xxlarge w3-right" placeholder="Buscar">   -->
             </div>
         </div>
 
+        <!--  -->
+        <div class="w3-flat-turquoise">
+            <div class="w3-container w3-content w3-center w3-padding-64 w3-Montserrat">
+                <h1 class="w3-wide" style="text-transform:uppercase">Você desenvolvedor, ou você, empresa</h1>
+                <hr></hr>
+                <!-- <img src="./img/linha.png" alt="Linha" class="w3-center" style="height:50%; width:50%"> -->
+                <p class="w3-center">CADASTRE-SE em nosso sistema e conheça a facilidade de contratar e de ser contratado</p>
+            </div>
+        </div>
+        
+    
+
+        <!-- Entrar Modal -->
         <div id="entrar" class="w3-modal">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
         
@@ -85,6 +117,7 @@
             </div>
         </div>
 
+        <!-- Cadastrar Modal -->
         <div id="cadastrar" class="w3-modal">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
             
@@ -114,6 +147,7 @@
             </div>
         </div>
 
+        <!-- Cadastro Desenvolvedor Modal -->
         <div id="cadastrar_desenvolvedor" class="w3-modal">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
     
@@ -166,33 +200,20 @@
             </div>
         </div>
 
-
-        <!-- <footer class="w3-container w3-flat-wet-asphalt w3-center w3-margin-top">
-                
-            <p>Nossas redes socias</p>
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-            
-            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>  
-        </footer> -->
-
-
         <!-- Footer -->
-        <footer class="w3-flat-wet-asphalt w3-Montserrat w3-bottom w3-padding-16">
+        <footer class="w3-flat-wet-asphalt w3-Montserrat w3-padding-16 w3-card-4">
             <div class="w3-container">
               	<div class="w3-row-padding">
-                	<div class="w3-col l4 w3-center" style="height:320px">
                     
-	                    <h4 class="w3-Montserrat"><b>Localização</b></h4>
+                    <!-- Localizacao -->
+                	<div id="localizacao" class="w3-col l4 w3-center" style="height:320px">
+                    
+	                    <h4 class="w3-Montserrat" style="font-weight: bold; text-transform:uppercase"><b>Localização</b></h4>
 	                    <p>Av. Cap. Mor Gouveia, s/n
 	                        <br>Natal, RN 59063-400</p>
 	                    
 	                    <!-- Add Google Maps -->
-	                    <p id="googleMap" style="height:200px; width:100%"></p>
+	                    <p id="googleMap" style="height:250px; width:100%"></p>
 	                    
 	                    <script>
 	                        function myMap() {
@@ -214,22 +235,20 @@
 
                 	</div>
 
-	                <div class="w3-col l4 w3-center w3-display-container" style="height:320px">
-	                        <!--<div class="w3-display-container">-->
-	                    <div class="w3-display-middle">
-	                        <h4 class="w3-Montserrat"><b>Nossas redes sociais</b></h4>
+                    <!-- Redes Sociais -->
+	                <div id="social" class="w3-col l4 w3-center w3-display-container" style="height:320px">
+	                    <div class="w3-display-middle" style="width: 100%">
+	                        <h4 class="w3-Montserrat" style="font-weight: bold; text-transform:uppercase">Nossas redes sociais</h4>
 	                        <i class="fa fa-facebook-official w3-hover-opacity" style="font-size:48px"> </i>
 	                        <i class="fa fa-instagram w3-hover-opacity" style="font-size:48px"> </i>
 	                        <i class="fa fa-twitter w3-hover-opacity" style="font-size:48px"> </i>
 	                    </div>
-	                        <!--</div>-->
 	                </div>
 
-	                <div class="w3-col l4">
-	                	<!-- <h4 class="w3-Montserrat"><b>Contate-nos</b></h4> -->
-
-	                	<form class="w3-container w3-margin ">
-	                		<h4 class="w3-Montserrat w3-center"><b>Contate-nos</b></h4>
+                    <!-- Contate-nos -->
+	                <div id="contate" class="w3-col l4" style="height:360px">
+	                	<form class="w3-container">
+	                		<h4 class="w3-Montserrat w3-center" style="font-weight: bold; text-transform:uppercase">Contate-nos</h4>
 	                		
 	                		<div class="w3-row w3-section">
 							  <div class="w3-col" style="width:45px"><i class="w3-xxlarge fa fa-user"></i></div>
@@ -259,47 +278,11 @@
 							    </div>
 							</div>
 
-							<button class="w3-btn w3-block w3-round w3-section w3-padding w3-right" type="submit" style="width:75px; background-color:#fff; color:#34495e">Enviar</button>	                		
+							<button class="w3-btn w3-round w3-section w3-right" type="submit" style="width:75px; background-color:#fff; color:#34495e">Enviar</button>	                		
 	                	</form>
 
 	             	</div>
-                    
             	</div>
-                <!-- <div class="col-md-4 mb-5 mb-lg-0">
-                  <h4 class="text-uppercase mb-4">WEB</h4>
-                  <ul class="list-inline mb-0">
-                    <li class="list-inline-item">
-                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                        <i class="fa fa-fw fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                        <i class="fa fa-fw fa-google-plus"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                        <i class="fa fa-fw fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                        <i class="fa fa-fw fa-linkedin"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                        <i class="fa fa-fw fa-dribbble"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-4">
-                  <h4 class="text-uppercase mb-4">Sobre Sistema de Empregos WEB</h4>
-                  <p class="lead mb-0">Desenvolvido pela Equipe AutDown da UFRN
-                    <a href="/piu/index.html">Home</a>.</p>
-                </div> -->
               </div>
             </div>
         </footer>
