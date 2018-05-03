@@ -41,7 +41,8 @@
                 // $("input.tel").mask("(00) 90000-0000");
                 $("input.tel").mask("(99) 99999-9999");
                 $("input.cpf").mask("999.999.999-99");
-                $("input.cep").mask("99.999-999");
+                $("input.cep").mask("99999-999");
+                $("input.cnpj").mask("99.999.999/9999-99");
             });
         </script>
     </head>
@@ -51,21 +52,21 @@
             
         <!-- Menu -->
         <div class="w3-top">
-            <div class="w3-bar w3-flat-wet-asphalt w3-card-4 w3-Montserrat" style="font-weight: bold; text-transform:uppercase">
+            <div class="w3-bar w3-flat-wet-asphalt w3-card-4 w3-Montserrat w3-large" style="font-weight: bold; text-transform:uppercase">
                     <!-- <i class="material-icons">home</i> -->
-                <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>  
+                <a href="#" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-home"></i> Home</a>  
                 <a href="#" class="w3-bar-item w3-button w3-padding-large" 
-                onclick="document.getElementById('cadastrar').style.display='block'">Cadastre-se</a> 
+                onclick="document.getElementById('cadastrar').style.display='block'"><i class="fa fa-user-plus"></i> Cadastre-se</a> 
                 <a href="#" class="w3-bar-item w3-button w3-padding-large" 
-                onclick="document.getElementById('entrar').style.display='block'">Entre</a>
-                <a href="#" class="w3-bar-item w3-button w3-padding-large">Sobre Nós</a> 
+                onclick="document.getElementById('entrar').style.display='block'"><i class="fa fa-sign-in"></i> Entre</a>
+                <a href="#sobre_nos" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-building"></i> Sobre Nós</a> 
                 <div class="w3-dropdown-hover w3-Montserrat">
                     <button class="w3-padding-large w3-button" title="Mais" style="font-weight: bold; text-transform:uppercase">
-                        Mais <i class="fa fa-caret-down"></i></button>     
+                        <i class="fa fa-plus-square"></i> Mais</i></button>     
                     <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                        <a href="#localizacao" class="w3-bar-item w3-button">Localização</a>
-                        <a href="#social" class="w3-bar-item w3-button">Nossas Redes Sociais</a>
-                        <a href="#contate" class="w3-bar-item w3-button">Contate-nos</a>
+                        <a href="#localizacao" class="w3-bar-item w3-button"><i class="fa fa-map"></i> Localização</a>
+                        <a href="#social" class="w3-bar-item w3-button"><i class="fa fa-users"></i> Nossas Redes Sociais</a>
+                        <a href="#contate" class="w3-bar-item w3-button"><i class="fa fa-id-card"></i> Contate-nos</a>
                     </div>
                 </div>
                   
@@ -77,17 +78,77 @@
         <!--  -->
         <div class="w3-flat-turquoise">
             <div class="w3-container w3-content w3-center w3-padding-64 w3-Montserrat">
-                <h1 class="w3-wide" style="text-transform:uppercase">Você desenvolvedor, ou você, empresa</h1>
+                <h1 class="w3-wide w3-xxlarge" style="text-transform:uppercase; font-weight: bold">Você desenvolvedor, ou você, empresa</h1>
                 <hr></hr>
                 <!-- <img src="./img/linha.png" alt="Linha" class="w3-center" style="height:50%; width:50%"> -->
-                <p class="w3-center">CADASTRE-SE em nosso sistema e conheça a facilidade de contratar e de ser contratado</p>
+                <p class="w3-center w3-large">CADASTRE-SE em nosso sistema e conheça a facilidade de contratar e de ser contratado</p>
             </div>
         </div>
-        
-    
+
+        <!-- Comentarios sobre a empresa -->
+        <div class="w3-container w3-content w3-center w3-padding-32 w3-Montserrat">
+            <div class="w3-row-padding w3-Montserrat">
+                <div class="w3-center w3-padding-32">
+                    <h3 class="w3-wide w3-xlarge" style="text-transform:uppercase">O que dizem sobre o Sistema de Emprego</h3>
+                </div>
+                
+                <div class="w3-third w3-margin-bottom">
+                    <div class="w3-card-4 w3-center">
+                        <img src="./img/team1.jpg" alt="Joana" style="width:100%">
+                        <div class="w3-container">
+                            <h3 class="w3-Montserrat">Joana Matos</h3>
+                            <p class="w3-opacity">Desenvolvedora WEB</p>
+                            <p>"Após utilizar o sistema de emprego, foi muito mais fácil de encontrar uma vaga em minha área, e o melhor, sem sair de casa."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w3-third w3-margin-bottom">
+                    <div class="w3-card-4 w3-center">
+                        <img src="./img/team2.jpg" alt="Micael" style="width:100%">
+                        <div class="w3-container">
+                            <h3 class="w3-Montserrat">Micael Souza</h3>
+                            <p class="w3-opacity">Diretor de RH</p>
+                            <p>"Com esta plataforma, tudo ficou mais fácil na hora de contratar alguém."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w3-third w3-margin-bottom">
+                    <div class="w3-card-4 w3-center">
+                        <img src="./img/team3.jpg" alt="Micael" style="width:100%">
+                        <div class="w3-container">
+                            <h3 class="w3-Montserrat">José Carlos</h3>
+                            <p class="w3-opacity">Consultor Empresarial</p>
+                            <p>"Para todos meus clientes eu recomendo o sistema de emprego, facilita na procura de profissionais, e 
+                                aumenta a quantidade de candidatos a uma vaga."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sobre nós -->
+        <div id="sobre_nos" class="w3-flat-turquoise">
+            <div class="w3-container w3-content w3-center w3-padding-32 w3-Montserrat">
+                <div class="w3-center w3-padding-32">
+                    <h3 class="w3-wide w3-xlarge" style="text-transform:uppercase;">Sobre Nós</h3>
+                    
+                    <div class="w3-row-padding">
+                        <div class="w3-col l6">
+                            <p class="w3-large">Sistema de Emprego Web é um sistema voltado para fazer a comunicação entre desenvolvedores e empresas.</p>
+                        </div>
+
+                        <div class="w3-col l6">
+                            <p class="w3-large">Os desenvolvedores expõem seus perfis e habilidades e as empresas oferecem vagas de trabalho e procuram por desenvolvedores.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Entrar Modal -->
-        <div id="entrar" class="w3-modal">
+        <div id="entrar" class="w3-modal w3-Montserrat">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
         
                 <div class="w3-center w3-border-bottom w3-light-grey"><br>
@@ -118,7 +179,7 @@
         </div>
 
         <!-- Cadastrar Modal -->
-        <div id="cadastrar" class="w3-modal">
+        <div id="cadastrar" class="w3-modal w3-Montserrat">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
             
                 <div class="w3-center w3-border-bottom w3-light-grey"><br>
@@ -148,55 +209,101 @@
         </div>
 
         <!-- Cadastro Desenvolvedor Modal -->
-        <div id="cadastrar_desenvolvedor" class="w3-modal">
+        <div id="cadastrar_desenvolvedor" class="w3-modal w3-Montserrat">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
     
-                    <div class="w3-center w3-border-bottom w3-light-grey"><br>
-                        <span onclick="document.getElementById('cadastrar_desenvolvedor').style.display='none'" class="w3-button w3-circle w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
-                        <img src="./img/desenvolvedor.png" alt="Desenvolvedor" style="width:15%" class="w3-margin-top">
-                        </br><h2 class="w3-Montserrat">Cadastro Desenvolvedor</h2>
-                    </div>
-                
-                    <form class="w3-container">
-                        <div class="w3-section">
-                            <label><b>Nome</b></label>
-                            <input class="w3-input w3-margin-bottom" type="text" name="nome" required>
+                <div class="w3-center w3-border-bottom w3-light-grey"><br>
+                    <span onclick="document.getElementById('cadastrar_desenvolvedor').style.display='none'" class="w3-button w3-circle w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
+                    <img src="./img/desenvolvedor.png" alt="Desenvolvedor" style="width:15%" class="w3-margin-top">
+                    </br><h2 class="w3-Montserrat">Cadastro Desenvolvedor</h2>
+                </div>
+            
+                <form class="w3-container">
+                    <div class="w3-section">
+                        <label><b>Nome</b></label>
+                        <input class="w3-input w3-margin-bottom" type="text" name="nome" required>
 
-                            <label><b>Sobrenome</b></label>
-                            <input class="w3-input w3-margin-bottom" type="text" name="sobrenome" required>
+                        <label><b>Sobrenome</b></label>
+                        <input class="w3-input w3-margin-bottom" type="text" name="sobrenome" required>
 
-                            <label><b>Data de Nascimento</b></label>
-                            <input class="w3-input w3-margin-bottom" type="date" name="data_nascimento" required>
+                        <label><b>Data de Nascimento</b></label>
+                        <input class="w3-input w3-margin-bottom" type="date" name="data_nascimento" required>
 
-                            <label><b>Sexo</b></label></br>
-                            <input class="w3-radio" type="radio" name="sexo" value="masculino">
-                            <label>Masculino</label>
-                            <input class="w3-radio" type="radio" name="sexo" value="feminino">
-                            <label>Feminino</label>
+                        <label><b>Sexo</b></label></br>
+                        <input class="w3-radio" type="radio" name="sexo" value="masculino">
+                        <label>Masculino</label>
+                        <input class="w3-radio" type="radio" name="sexo" value="feminino">
+                        <label>Feminino</label>
 
-                            </br></br>
-                            <label><b>CPF</b></label>
-                            <input class="w3-input w3-margin-bottom cpf" type="text" name="cpf" required>
-                            
-                            <label><b>Telefone</b></label>
-                            <input class="w3-input w3-margin-bottom tel" type="tel" name="telefone" required>
-
-                            <label><b>E-mail</b></label>
-                            <input class="w3-input w3-margin-bottom" type="email" name="email" required>
-                            <label><b>Senha</b></label>
-                            <input class="w3-input" type="password" name="psw" required>
-                            
-                            <input class="w3-check w3-margin-top" type="checkbox" required> 
-                            <label>Eu li e concordo com os termos de uso</label>
-
-                            <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Cadastrar</button>
+                        </br></br>
+                        <label><b>CPF</b></label>
+                        <input class="w3-input w3-margin-bottom cpf" type="text" name="cpf" required>
                         
-                        </div>
-                    </form>
-                
-                    <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                        <button onclick="document.getElementById('cadastrar_desenvolvedor').style.display='none'" type="button" class="w3-button w3-red">Cancelar</button>
+                        <label><b>Telefone</b></label>
+                        <input class="w3-input w3-margin-bottom tel" type="tel" name="telefone" required>
+
+                        <label><b>E-mail</b></label>
+                        <input class="w3-input w3-margin-bottom" type="email" name="email" required>
+                        <label><b>Senha</b></label>
+                        <input class="w3-input" type="password" name="psw" required>
+                        
+                        <input class="w3-check w3-margin-top" type="checkbox" required> 
+                        <label>Eu li e concordo com os termos de uso</label>
+
+                        <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Cadastrar</button>
+                    
                     </div>
+                </form>
+            
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                    <button onclick="document.getElementById('cadastrar_desenvolvedor').style.display='none'" type="button" class="w3-button w3-red">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cadastro Empresa Modal -->
+        <div id="cadastrar_empresa" class="w3-modal w3-Montserrat">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+    
+                <div class="w3-center w3-border-bottom w3-light-grey"><br>
+                    <span onclick="document.getElementById('cadastrar_empresa').style.display='none'" class="w3-button w3-circle w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
+                    <img src="./img/empresa.png" alt="Empresa" style="width:15%" class="w3-margin-top">
+                    </br><h2 class="w3-Montserrat">Cadastro Empresa</h2>
+                </div>
+            
+                <form class="w3-container">
+                    <div class="w3-section">
+                        <label><b>Razão Social</b></label>
+                        <input class="w3-input w3-margin-bottom" type="text" name="razao_social" required>
+
+                        <label><b>Nome Fantasia</b></label>
+                        <input class="w3-input w3-margin-bottom" type="text" name="nome_fantasia" required>
+
+                        <label><b>CNPJ</b></label>
+                        <input class="w3-input w3-margin-bottom cnpj" type="text" name="cnpj" required>
+                        
+                        <label><b>Telefone</b></label>
+                        <input class="w3-input w3-margin-bottom tel" type="tel" name="telefone" required>
+
+                        <label><b>CEP</b></label>
+                        <input class="w3-input w3-margin-bottom cep" type="text" name="cep" required>
+
+                        <label><b>E-mail</b></label>
+                        <input class="w3-input w3-margin-bottom" type="email" name="email" required>
+                        <label><b>Senha</b></label>
+                        <input class="w3-input" type="password" name="psw" required>
+                        
+                        <input class="w3-check w3-margin-top" type="checkbox" required> 
+                        <label>Eu li e concordo com os termos de uso</label>
+
+                        <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Cadastrar</button>
+                    
+                    </div>
+                </form>
+            
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                    <button onclick="document.getElementById('cadastrar_empresa').style.display='none'" type="button" class="w3-button w3-red">Cancelar</button>
+                </div>
             </div>
         </div>
 
@@ -206,7 +313,7 @@
               	<div class="w3-row-padding">
                     
                     <!-- Localizacao -->
-                	<div id="localizacao" class="w3-col l4 w3-center" style="height:320px">
+                	<div id="localizacao" class="w3-col l4 w3-center w3-large" style="height:320px">
                     
 	                    <h4 class="w3-Montserrat" style="font-weight: bold; text-transform:uppercase"><b>Localização</b></h4>
 	                    <p>Av. Cap. Mor Gouveia, s/n
@@ -236,7 +343,7 @@
                 	</div>
 
                     <!-- Redes Sociais -->
-	                <div id="social" class="w3-col l4 w3-center w3-display-container" style="height:320px">
+	                <div id="social" class="w3-col l4 w3-center w3-display-container w3-large" style="height:320px">
 	                    <div class="w3-display-middle" style="width: 100%">
 	                        <h4 class="w3-Montserrat" style="font-weight: bold; text-transform:uppercase">Nossas redes sociais</h4>
 	                        <i class="fa fa-facebook-official w3-hover-opacity" style="font-size:48px"> </i>
@@ -246,7 +353,7 @@
 	                </div>
 
                     <!-- Contate-nos -->
-	                <div id="contate" class="w3-col l4" style="height:360px">
+	                <div id="contate" class="w3-col l4 w3-large" style="height:380px">
 	                	<form class="w3-container">
 	                		<h4 class="w3-Montserrat w3-center" style="font-weight: bold; text-transform:uppercase">Contate-nos</h4>
 	                		
@@ -278,7 +385,8 @@
 							    </div>
 							</div>
 
-							<button class="w3-btn w3-round w3-section w3-right" type="submit" style="width:75px; background-color:#fff; color:#34495e">Enviar</button>	                		
+							<button class="w3-btn w3-round w3-section w3-right" type="submit" style="background-color:#fff; color:#34495e">
+                                <i class="fa fa-send"></i> Enviar</button>	                		
 	                	</form>
 
 	             	</div>
