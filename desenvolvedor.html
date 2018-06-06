@@ -1,0 +1,224 @@
+<!-- http://konpa.github.io/devicon/ -->
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Perfil Desenvolvedor</title>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+        <style>
+            .w3-Montserrat {
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .material-icons {
+                vertical-align:-14%
+            }
+
+            .hide {
+                display: none;
+            }
+
+            hr {
+                display:block;
+                border:0px;
+                height:10px;
+                background-image:url('./img/linha.png');
+            }
+
+            html,h1,h2,h3,h4,h5,h6,p,button {
+                font-family: 'Montserrat', sans-serif;
+            }
+        </style>
+
+        <script>
+            function mostrar(btn) {
+                var div;
+                var seta;
+                
+                if(btn.name == "linguagens_btn") {
+                    div = document.getElementById('linguagens');
+                    seta = document.getElementById('linguagens_seta');
+                } else if (btn.name == "dados_btn") {
+                    div = document.getElementById('dados');
+                    seta = document.getElementById('dados_seta');
+                } else if (btn.name == "experiencia_btn") {
+                    div = document.getElementById('experiencia');
+                    seta = document.getElementById('experiencia_seta');
+                } else if (btn.name == "idiomas_btn") {
+                    div = document.getElementById('idiomas');
+                    seta = document.getElementById('idiomas_seta');
+                }
+
+                var display = div.style.display;
+                if(display == "none") {
+                    div.style.display = 'block';
+                    seta.className = seta.className.replace("fa-chevron-down", "fa-chevron-up");
+                } else {
+                    div.style.display = 'none';
+                    seta.className = seta.className.replace("fa-chevron-up", "fa-chevron-down");
+                }
+            }
+        </script>
+
+    </head>
+
+    <body class="w3-flat-turquoise w3-Montserrat">
+        <div class="w3-content w3-margin-top w3-margin-bottom" style="max-width:1400px;">
+            <div class="w3-row-padding">
+
+                <!-- Menu Usuario -->
+                <div class="w3-third">
+                    <div class="w3-card-4 w3-flat-wet-asphalt">
+                        
+                        <img src="./img/team1.jpg" alt="Avatar" style="width: 100%">
+                        <div class="w3-container w3-white">
+                            <h3 class="w3-Montserrat w3-center"><b>Joana Matos</b></h3>
+                        </div>
+
+                        <div class="w3-container w3-margin-top">
+                  
+                            <!-- Dados Pessoais -->
+                            <button name="dados_btn" class="w3-button w3-block w3-left-align w3-large" onclick="mostrar(this)">
+                                    <b><i class="fa fa-user fa-fw w3-margin-right w3-xlarge"></i>Dados Pessoais
+                                        <i id="dados_seta" class="fa fa-chevron-up fa-fw w3-margin-right w3-large"></i></b>           
+                            </button>
+                            <div id="dados">
+                                <p><i class="fa fa-id-card fa-fw w3-margin-right w3-large"></i>012.345.678-99</p>
+                                <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-large"></i>12/12/1992</p>
+                                <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large"></i>email@w3.com</p>
+                                <p><i class="fa fa-phone fa-fw w3-margin-right w3-large"></i>(84) 94002-8922</p>
+                                <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large"></i>Natal, RN</p>
+                            </div>
+                            <hr class="w3-white">
+
+                            <!-- Linguagens -->
+                            <button name="linguagens_btn" class="w3-button w3-block w3-left-align w3-large" onclick="mostrar(this)">
+                                    <b><i class="devicon-devicon-plain fa-fw w3-margin-right w3-xlarge"></i> Linguagens
+                                        <i id="linguagens_seta" class="fa fa-chevron-up fa-fw w3-margin-right w3-large"></i></b>           
+                            </button>
+                            <div id="linguagens">
+                                <p><i class="devicon-html5-plain fa-fw w3-margin-right w3-large"></i>HTML</p>
+                                <p><i class="devicon-css3-plain fa-fw w3-margin-right w3-large"></i>CSS</p>
+                                <p><i class="devicon-javascript-plain fa-fw w3-margin-right w3-large"></i>JavaScript</p>
+                                <p><i class="devicon-php-plain fa-fw w3-margin-right w3-large"></i>PHP</p>
+                                <p><i class="devicon-python-plain fa-fw w3-margin-right w3-large"></i>Python</p>
+                            </div>
+                            <hr class="w3-white">
+
+                            <!-- Experiencia -->
+                            <button name="experiencia_btn" class="w3-button w3-block w3-left-align w3-large" onclick="mostrar(this)">
+                                    <b><i class="fa fa-briefcase fa-fw w3-margin-right w3-xlarge"></i>Experiência
+                                        <i id="experiencia_seta" class="fa fa-chevron-up fa-fw w3-margin-right w3-large"></i></b>           
+                            </button>
+                            <div id="experiencia">
+                                <h5 class="w3-Montserrat">Desenvolvedor Web</h5>
+                                <h6 class="w3-Montserrat"><i class="fa fa-calendar fa-fw w3-margin-right w3-large"></i>Junho 2016 - Março 2017</h6>
+                                <p>Bolsista de desenvolvimento front end no Instituto Metrópole Digital - UFRN</p>
+                            </div>
+                            <hr class="w3-white">
+
+                            <!-- Idiomas -->
+                            <button name="idiomas_btn" class="w3-button w3-block w3-left-align w3-large" onclick="mostrar(this)">
+                                    <b><i class="fa fa-language fa-fw w3-margin-right w3-xlarge"></i>Idiomas
+                                        <i id="idiomas_seta" class="fa fa-chevron-up fa-fw w3-margin-right w3-large"></i></b>           
+                            </button>
+                            <div id="idiomas">
+                                <p>Português Brasil - Avançado</p>
+                                <p>Inglês - Avançado</p>
+                                <p>Espanhol - Intermediário</p>
+                            </div>
+                        </div><br>
+                    </div>
+                </div>
+                
+                <!-- Informacoes de vagas -->
+                <div class="w3-twothird">
+                    <div class="w3-container w3-card-4 w3-white w3-margin-bottom">
+                        <h3 class="w3-Montserrat w3-padding-16"><i class="fa fa-building fa-fw w3-margin-right"></i>Vagas Disponíveis Para Você</h3>
+                        <div class="w3-container">
+                            <ul class="w3-ul">
+                                <li class="w3-button w3-block w3-left-align" onclick="document.getElementById('vaga_imd').style.display='block'">
+                                    <h5 class="w3-Montserrat"><b>Estágio</b> - Instituto Metrópole Digital (UFRN)</h5>
+                                    <p>Estágio para desenvolvimento de um sistema em python</p>
+                                </li>
+                                <li class="w3-button w3-block w3-left-align" onclick="document.getElementById('vaga_sinfo').style.display='block'">
+                                        <h5 class="w3-Montserrat"><b>CLT</b> - SINFO</h5>
+                                        <p>Efetivo para desenvolvimento web front end</p>
+                                </li>
+
+                                <br>
+                            </ul>
+                            
+                            
+                        </div>
+                        <!-- <hr class="w3-flat-wet-asphalt"> -->
+                    </div>
+
+                    <div class="w3-container w3-card-4 w3-white">
+                        <h3 class="w3-Montserrat "><i class="fa fa-child fa-fw w3-margin-right"></i>Vagas Que Tentou</h3>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Vaga IMD Modal -->
+        <div id="vaga_imd" class="w3-modal w3-Montserrat">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+            
+                <div class="w3-center w3-border-bottom w3-light-grey"><br>
+                    <span onclick="document.getElementById('vaga_imd').style.display='none'" class="w3-button w3-circle w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
+                    <h3>Estágio<br>Instituto Metrópole Digital (UFRN)</h3>
+                </div>
+
+                <div class="w3-container w3-margin w3-text-black">
+                    <h6><b>Descrição:</b> Estágio para desenvolvimento de um sistema em python</h6>
+                    <h6><b>Salário:</b> R$ 600,00</h6>
+                    <h6><b>Horas:</b> 20h semanais, 4h diárias das 08h às 12h</h6>
+                    <h6><b>Benéficios:</b> Nenhum</h6>
+                    <h6><b>Edital: </b><a href="https://imd.ufrn.br/portal/editais">Link</a></h6>
+                </div>
+
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                    <button onclick="document.getElementById('vaga_imd').style.display='none'" type="button" 
+                    class="w3-button w3-red">Cancelar</button>
+
+                    <button type="button" class="w3-button w3-green w3-right">Candidatar-me</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vaga SINFO Modal -->
+        <div id="vaga_sinfo" class="w3-modal w3-Montserrat">
+                <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+                
+                    <div class="w3-center w3-border-bottom w3-light-grey"><br>
+                        <span onclick="document.getElementById('vaga_sinfo').style.display='none'" class="w3-button w3-circle w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
+                        <h3>CLT<br>SINFO</h3>
+                    </div>
+    
+                    <div class="w3-container w3-margin w3-text-black">
+                        <h6><b>Descrição:</b> Efetivo para desenvolvimento web front end</h6>
+                        <h6><b>Salário:</b> À combinar</h6>
+                        <h6><b>Horas:</b> 40h semanais, com horário de trabalho à combinar</h6>
+                        <h6><b>Benéficios:</b> Vale-Transporte (R$ 7,00 ao dia) e Vale-Alimentação (R$ 350,00)</h6>
+                        <h6><b>Edital: </b><a href=#>Link</a></h6>
+                    </div>
+    
+                    <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                        <button onclick="document.getElementById('vaga_sinfo').style.display='none'" type="button" 
+                        class="w3-button w3-red">Cancelar</button>
+    
+                        <button type="button" class="w3-button w3-green w3-right">Candidatar-me</button>
+                    </div>
+                </div>
+            </div>
+    </body>
