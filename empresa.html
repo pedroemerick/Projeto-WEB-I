@@ -5,10 +5,11 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <title>Perfil Desenvolvedor</title>
+        <title>Perfil Empresa</title>
 
         <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="jquery.maskedinput.js" type="text/javascript"></script>
+        <script src="jquery.maskMoney.js" type="text/javascript"></script>
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
@@ -36,7 +37,7 @@
                 background-image:url('./img/linha.png');
             }
 
-            html,h1,h2,h3,h4,h5,h6,p,button {
+            html,h1,h2,h3,h4,h5,h6,p,button,span {
                 font-family: 'Montserrat', sans-serif;
             }
         </style>
@@ -126,21 +127,25 @@
                 $("input.data").mask("99/99/9999");
                 $("input.duracao").mask("99/9999");
             });
+
+            $(function() {
+                $("input.dinheiro").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
+            })
         </script>
 
     </head>
 
     <body class="w3-flat-turquoise w3-Montserrat">
 
-        <!-- Perfil Usuario -->
+        <!-- Perfil Empresa -->
         <div class="w3-content w3-margin-bottom w3-margin-top w3-container" style="max-width:1400px">
             <div class="w3-row-padding">
 
-                <!-- Menu Usuario -->
+                <!-- Menu Empresa -->
                 <div class="w3-third">
                     <div class="w3-card-4 w3-flat-wet-asphalt">
                         <div class="w3-display-container">
-                            <img src="./img/team1.jpg" alt="Avatar" style="width: 100%">
+                            <img src="./img/google.jpg" alt="Avatar" style="width: 100%">
                             <div class="w3-padding w3-display-topright">
                                 <button class="w3-button w3-flat-wet-asphalt">
                                     <i class="fa fa-sign-out fa-fw"></i>Sair</button>
@@ -148,58 +153,36 @@
                         </div>
                         
                         <div class="w3-container w3-white">
-                            <h3 id="nome" class="w3-Montserrat w3-center"><b>Joana Matos</b></h3>
+                            <h3 id="nome" class="w3-Montserrat w3-center"><b>Google</b></h3>
                         </div>
 
                         <div class="w3-container w3-margin-top">
                   
-                            <!-- Dados Pessoais -->
+                            <!-- Dados Empresariais -->
                             <div class="w3-bar">
                                 <button name="dados_btn" class="w3-bar-item w3-button w3-block w3-left-align w3-large" onclick="mostrar('dados', 'dados_seta')">
-                                    <b><i class="fa fa-user fa-fw w3-margin-right w3-xlarge"></i>Dados Pessoais
+                                    <b><i class="fa fa-user fa-fw w3-margin-right w3-xlarge"></i>Dados Empresariais
                                         <i id="dados_seta" class="fa fa-chevron-down fa-fw w3-margin-right w3-large"></i></b>           
                                 </button>
                                 <button class="w3-bar-item w3-button w3-right w3-large" title="Editar"
-                                onclick="document.getElementById('dados_pessoais_modal').style.display='block'">
+                                onclick="document.getElementById('dados_empresariais_modal').style.display='block'">
                                     <i class="fa fa-pencil-square-o fa-fw w3-large"></i>           
                                 </button>
                             </div>
 
                             
                             <div id="dados" class="w3-hide">
-                                <p title="CPF"><i class="fa fa-id-card fa-fw w3-margin-right w3-large"></i>012.345.678-99</p>
-                                <p title="Data de Nascimento"><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-large"></i>12/12/1992</p>
-                                <p title="Email"><i class="fa fa-envelope fa-fw w3-margin-right w3-large"></i>email@w3.com</p>
-                                <p title="Telefone"><i class="fa fa-phone fa-fw w3-margin-right w3-large"></i>(84) 94002-8922</p>
-                                <p title="Cidade"><i class="fa fa-map-marker fa-fw w3-margin-right w3-large" ></i>Natal, RN</p>
+                                <p title="Razão Social - CNPJ"><i class="fa fa-id-card fa-fw w3-margin-right w3-large"></i>Google LLC - 01.234.567/8910-11</p>
+                                <p title="Email"><i class="fa fa-envelope fa-fw w3-margin-right w3-large"></i>contato@google.com</p>
+                                <p title="Telefone"><i class="fa fa-phone fa-fw w3-margin-right w3-large"></i>(31) 2128-6800</p>
+                                <p title="Cidade"><i class="fa fa-map-marker fa-fw w3-margin-right w3-large" ></i>Belo Horizonte, MG</p>
                             </div>
                             <hr class="w3-white">
 
-                            <!-- Linguagens -->
-                            <div class="w3-bar">
-                                <button name="linguagens_btn" class="w3-bar-item w3-button w3-block w3-left-align w3-large" onclick="mostrar('linguagens', 'linguagens_seta')">
-                                    <b><i class="devicon-devicon-plain fa-fw w3-margin-right w3-xlarge"></i> Linguagens
-                                        <i id="linguagens_seta" class="fa fa-chevron-down fa-fw w3-margin-right w3-large"></i></b>           
-                                </button>
-                                <button class="w3-bar-item w3-button w3-right w3-large" title="Editar"
-                                onclick="document.getElementById('linguagens_modal').style.display='block'">
-                                    <i class="fa fa-pencil-square-o fa-fw w3-large"></i>           
-                                </button>
-                            </div>
-                            
-                            <div id="linguagens" class="w3-hide">
-                                <p><i class="devicon-html5-plain fa-fw w3-margin-right w3-large"></i>HTML</p>
-                                <p><i class="devicon-css3-plain fa-fw w3-margin-right w3-large"></i>CSS</p>
-                                <p><i class="devicon-javascript-plain fa-fw w3-margin-right w3-large"></i>JavaScript</p>
-                                <p><i class="devicon-php-plain fa-fw w3-margin-right w3-large"></i>PHP</p>
-                                <p><i class="devicon-python-plain fa-fw w3-margin-right w3-large"></i>Python</p>
-                            </div>
-                            <hr class="w3-white">
-
-                            <!-- Experiencia -->
+                            <!-- Vagas Cadastradas -->
                             <div class="w3-bar">
                                 <button name="experiencia_btn" class=" w3-bar-item w3-button w3-block w3-left-align w3-large" onclick="mostrar('experiencia', 'experiencia_seta')">
-                                    <b><i class="fa fa-briefcase fa-fw w3-margin-right w3-xlarge"></i>Experiência
+                                    <b><i class="fa fa-briefcase fa-fw w3-margin-right w3-xlarge"></i>Vagas Cadastradas
                                         <i id="experiencia_seta" class="fa fa-chevron-down fa-fw w3-margin-right w3-large"></i></b>           
                                 </button>
                                 <button class="w3-bar-item w3-button w3-right w3-large" title="Editar"
@@ -213,59 +196,39 @@
                                 <h6 class="w3-Montserrat"><i class="fa fa-calendar fa-fw w3-margin-right w3-large"></i>Junho 2016 - Março 2017</h6>
                                 <p>Bolsista de desenvolvimento front end no Instituto Metrópole Digital - UFRN</p>
                             </div>
-                            <hr class="w3-white">
 
-                            <!-- Idiomas -->
-                            <div class="w3-bar">
-                                <button name="idiomas_btn" class="w3-bar-item w3-button w3-block w3-left-align w3-large" onclick="mostrar('idiomas', 'idiomas_seta')">
-                                    <b><i class="fa fa-language fa-fw w3-margin-right w3-xlarge"></i>Idiomas
-                                        <i id="idiomas_seta" class="fa fa-chevron-down fa-fw w3-margin-right w3-large"></i></b>           
-                                </button>
-                                <button class="w3-bar-item w3-button w3-right w3-large" title="Editar"
-                                onclick="document.getElementById('idiomas_modal').style.display='block'">
-                                    <i class="fa fa-pencil-square-o fa-fw w3-large"></i>           
-                                </button>
-                            </div>
-                            
-                            <div id="idiomas" class="w3-hide">
-                                <p>Português Brasil - Avançado</p>
-                                <p>Inglês - Avançado</p>
-                                <p>Espanhol - Intermediário</p>
-                            </div>
                         </div><br>
                     </div>
                 </div>
                 
                 <!-- Informacoes de vagas -->
                 <div class="w3-twothird">
-                    <!-- Vagas disponiveis -->
+                    <!-- Desenvolvedores disponiveis -->
                     <div class="w3-container w3-card-4 w3-white w3-margin-bottom">
                         <div class="w3-bar">
-                            <span class="w3-Montserrat w3-bar-item w3-xlarge w3-padding-16"><i class="fa fa-building fa-fw w3-margin-right"></i>Vagas Disponíveis Para Você</span>
+                            <span class="w3-Montserrat w3-bar-item w3-xlarge w3-padding-16"><i class="fa fa-user-plus fa-fw w3-margin-right"></i>Desenvolvedores Disponíveis</span>
                             <a href="#" class="w3-button w3-bar-item w3-black w3-right w3-margin-top"><i class="fa fa-search fa-fw"></i></a>
                             <input type="text" class="w3-input w3-bar-item w3-right w3-border w3-margin-top w3-margin-right" placeholder="Busca" style="width: 20%">
                         </div>
                         
                         <div class="w3-container">
                             <ul class="w3-ul">
-                                <li class="w3-button w3-block w3-left-align" onclick="document.getElementById('vaga_imd').style.display='block'">
-                                    <h5 class="w3-Montserrat"><b>Estágio</b> - Instituto Metrópole Digital (UFRN)</h5>
-                                    <p>Estágio para desenvolvimento de um sistema em python</p>
+                                <li class="w3-bar w3-button w3-block w3-left-align" onclick="document.getElementById('desenvolvedor_modal').style.display='block'">
+                                    <img src="./img/team1.jpg" class="w3-bar-item w3-round w3-margin-top w3-hide-small" style="width:18%">
+                                    <div class="w3-bar-item">
+                                        <h5 class="w3-Montserrat"><b>Joana Matos</b></h5>
+                                        <p>Desenvolve em HTML, CSS, JavaScript, PHP e Python</p>
+                                    </div>
                                 </li>
-                                <li class="w3-button w3-block w3-left-align" onclick="document.getElementById('vaga_sinfo').style.display='block'">
-                                        <h5 class="w3-Montserrat"><b>CLT</b> - SINFO</h5>
-                                        <p>Efetivo para desenvolvimento web front end</p>
-                                </li>
-
                                 <br>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Vagas que tentou -->
+                    <!-- Vagas Cadastradas -->
                     <div class="w3-container w3-card-4 w3-white w3-margin-bottom">
                         <div class="w3-bar">
-                            <span class="w3-Montserrat w3-bar-item w3-xlarge w3-padding-16"><i class="fa fa-child fa-fw w3-margin-right"></i>Vagas Que Tentou</span>
+                            <span class="w3-Montserrat w3-bar-item w3-xlarge w3-padding-16"><i class="fa fa-briefcase fa-fw w3-margin-right"></i>Vagas Cadastradas</span>
                             <a href="#" class="w3-button w3-bar-item w3-black w3-right w3-margin-top"><i class="fa fa-search fa-fw"></i></a>
                             <input type="text" class="w3-input w3-bar-item w3-right w3-border w3-margin-top w3-margin-right" placeholder="Busca" style="width: 20%">
                         </div>
@@ -306,28 +269,114 @@
             </div>
         </div>
         
-        <!-- Vaga IMD Modal -->
-        <div id="vaga_imd" class="w3-modal w3-Montserrat">
-            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+        <!-- Desenvolvedor Modal -->
+        <div id="desenvolvedor_modal" class="w3-modal w3-Montserrat">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-margin-bottom" style="max-width:600px">
             
                 <div class="w3-center w3-border-bottom w3-light-grey"><br>
-                    <span onclick="document.getElementById('vaga_imd').style.display='none'" class="w3-button w3-circle w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
-                    <h3>Estágio<br>Instituto Metrópole Digital (UFRN)</h3>
+                    <span onclick="document.getElementById('desenvolvedor_modal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
+                    <img src="./img/team1.jpg" alt="Avatar" style="width:30%" class="w3-margin-top w3-round">
+                    <br><h3>Joana Matos</h3>
                 </div>
 
                 <div class="w3-container w3-margin w3-text-black">
-                    <h6><b>Descrição:</b> Estágio para desenvolvimento de um sistema em python</h6>
-                    <h6><b>Salário:</b> R$ 600,00</h6>
-                    <h6><b>Horas:</b> 20h semanais, 4h diárias das 08h às 12h</h6>
-                    <h6><b>Benéficios:</b> Nenhum</h6>
-                    <h6><b>Edital: </b><a href="https://imd.ufrn.br/portal/editais">Link</a></h6>
+                    <h6><b>Data de Nascimento:</b> 12/12/1992</h6>
+                    <h6><b>Email:</b> email@w3.com</h6>
+                    <h6><b>Telefone:</b> (84) 94002-8922</h6>
+                    <h6><b>Cidade:</b> Natal, RN</h6>
+
+                    <br><h6><b>Desenvolve em:</b></h6>
+                    <ul class="w3-ul w3-border">
+                        <li class="w3-display-container">
+                            <i class="devicon-html5-plain fa-fw w3-margin-right w3-large"></i>HTML  
+                        </li>
+                        
+                        <li class="w3-display-container">
+                            <i class="devicon-css3-plain fa-fw w3-margin-right w3-large"></i>CSS
+                        </li>
+
+                        <li class="w3-display-container">
+                            <i class="devicon-javascript-plain fa-fw w3-margin-right w3-large"></i>JavaScript
+                        </li>
+
+                        <li class="w3-display-container">
+                            <i class="devicon-php-plain fa-fw w3-margin-right w3-large"></i>PHP
+                        </li>
+
+                        <li class="w3-display-container">
+                            <i class="devicon-python-plain fa-fw w3-margin-right w3-large"></i>Python
+                        </li>
+                    </ul>
+
+                    <br><h6><b>Experiência:</b></h6>
+                    <ul id="lista_experiencia" class="w3-ul w3-border">
+                        <li class="w3-display-container">Desenvolvedor WEB<br><br>
+                            <i class="fa fa-calendar fa-fw w3-margin-right w3-large"></i>Junho 2016 - Março 2017<br><br>
+                            Bolsista de desenvolvimento front end no Instituto Metrópole Digital - UFRN<br>    
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                    <button onclick="document.getElementById('vaga_imd').style.display='none'" type="button" 
+                    <button onclick="document.getElementById('desenvolvedor_modal').style.display='none'" type="button" 
                     class="w3-button w3-red">Cancelar</button>
 
-                    <button type="button" class="w3-button w3-green w3-right">Candidatar-me</button>
+                    <button type="button" class="w3-button w3-green w3-right">Fazer Proposta</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Candidato Modal -->
+        <div id="candidato_modal" class="w3-modal w3-Montserrat">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-margin-bottom" style="max-width:600px">
+            
+                <div class="w3-center w3-border-bottom w3-light-grey"><br>
+                    <span onclick="document.getElementById('candidato_modal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
+                    <img src="./img/team1.jpg" alt="Avatar" style="width:30%" class="w3-margin-top w3-round">
+                    <br><h3>Joana Matos</h3>
+                </div>
+
+                <div class="w3-container w3-margin w3-text-black">
+                    <h6><b>Data de Nascimento:</b> 12/12/1992</h6>
+                    <h6><b>Email:</b> email@w3.com</h6>
+                    <h6><b>Telefone:</b> (84) 94002-8922</h6>
+                    <h6><b>Cidade:</b> Natal, RN</h6>
+
+                    <br><h6><b>Desenvolve em:</b></h6>
+                    <ul class="w3-ul w3-border">
+                        <li class="w3-display-container">
+                            <i class="devicon-html5-plain fa-fw w3-margin-right w3-large"></i>HTML  
+                        </li>
+                        
+                        <li class="w3-display-container">
+                            <i class="devicon-css3-plain fa-fw w3-margin-right w3-large"></i>CSS
+                        </li>
+
+                        <li class="w3-display-container">
+                            <i class="devicon-javascript-plain fa-fw w3-margin-right w3-large"></i>JavaScript
+                        </li>
+
+                        <li class="w3-display-container">
+                            <i class="devicon-php-plain fa-fw w3-margin-right w3-large"></i>PHP
+                        </li>
+
+                        <li class="w3-display-container">
+                            <i class="devicon-python-plain fa-fw w3-margin-right w3-large"></i>Python
+                        </li>
+                    </ul>
+
+                    <br><h6><b>Experiência:</b></h6>
+                    <ul id="lista_experiencia" class="w3-ul w3-border">
+                        <li class="w3-display-container">Desenvolvedor WEB<br><br>
+                            <i class="fa fa-calendar fa-fw w3-margin-right w3-large"></i>Junho 2016 - Março 2017<br><br>
+                            Bolsista de desenvolvimento front end no Instituto Metrópole Digital - UFRN<br>    
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                    <button type="button" class="w3-button w3-red">Remover</button>
+                    <button type="button" class="w3-button w3-green w3-right">Entrar em Contato</button>
                 </div>
             </div>
         </div>
@@ -360,10 +409,10 @@
 
         <!-- Vaga Google Modal -->
         <div id="vaga_google" class="w3-modal w3-Montserrat">
-            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-margin-bottom" style="max-width:800px">
             
                 <div class="w3-center w3-border-bottom w3-light-grey"><br>
-                    <span onclick="document.getElementById('vaga_google').style.display='none'" class="w3-button w3-circle w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
+                    <span onclick="document.getElementById('vaga_google').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
                     <h3>CLT<br>Google</h3>
                 </div>
 
@@ -373,78 +422,109 @@
                     <h6><b>Horas:</b> 40h semanais, com horário de trabalho à combinar</h6>
                     <h6><b>Benéficios:</b> Vale-Transporte (R$ 7,00 ao dia) e Vale-Alimentação (R$ 500,00)</h6>
                     <h6><b>Edital: </b><a href=#>Link</a></h6>
-                </div>
+                    <h6><b>Período:</b> 13/05/2018 - 16/06/2018</h6><br>
 
-                <div class="w3-container w3-border-top w3-padding-16 w3-red">
-                    <h5 class="w3-center"><i class="fa fa-exclamation-circle fa-fw w3-margin-right"></i>Fique atento 
-                        aos meios de contato que você cadastrou, a qualquer momento a empresa pode entrar em contato
-                        com você !!!
-                    </h5>
-                </div>
-            </div>
-        </div>
-
-        <!-- Vaga Multi Modal -->
-        <div id="vaga_multi" class="w3-modal w3-Montserrat">
-            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
-            
-                <div class="w3-center w3-border-bottom w3-light-grey"><br>
-                    <span onclick="document.getElementById('vaga_multi').style.display='none'" class="w3-button w3-circle w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
-                    <h3>Estágio<br>MultiSoftware</h3>
-                </div>
-
-                <div class="w3-container w3-margin w3-text-black">
-                    <h6><b>Descrição:</b> Estágio para desenvolvimento em Python</h6>
-                    <h6><b>Salário:</b> R$ 500,00</h6>
-                    <h6><b>Horas:</b> 20h semanais, 4h diárias das 13h às 18h</h6>
-                    <h6><b>Benéficios:</b> Nenhum</h6>
-                    <h6><b>Edital: </b><a href=#>Link</a></h6>
+                    <h6><b>Candidatos: </b></h6>
+                    <ul class="w3-ul">
+                        <li class="w3-bar w3-button w3-block w3-left-align" onclick="document.getElementById('candidato_modal').style.display='block';document.getElementById('vaga_google').style.display='none'">    
+                            <img src="./img/team1.jpg" class="w3-bar-item w3-round w3-margin-top w3-hide-small" style="width:18%">
+                            <div class="w3-bar-item">
+                                <h5 class="w3-Montserrat"><b>Joana Matos</b></h5>
+                                <p>Desenvolve em HTML, CSS, JavaScript, PHP e Python</p>
+                            </div>
+                        </li>
+                        <br>
+                    </ul>
                 </div>
 
                 <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                    <button type="button" class="w3-button w3-red">Recusar</button>
-                    <button type="button" class="w3-button w3-green w3-right">Aceitar</button>
+                    <button type="button" class="w3-button w3-red">Remover</button>
+                    <button type="button" onclick="document.getElementById('vaga_google').style.display='none'; document.getElementById('editar_vaga').style.display='block'"
+                    class="w3-button w3-green w3-right">Editar</button>
                 </div>
             </div>
         </div>
 
-        <!-- Dados Pessoais Modal -->
-        <div id="dados_pessoais_modal" class="w3-modal w3-Montserrat">
+        <!-- Editar Vaga-->
+        <div id="editar_vaga" class="w3-modal w3-Montserrat">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-margin-bottom" style="max-width:600px">
                 
                 <div class="w3-center w3-border-bottom w3-light-grey"><br>
-                    <span onclick="document.getElementById('dados_pessoais_modal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
-                    <h3><b><i class="fa fa-user fa-fw w3-margin-right w3-xlarge"></i>Dados Pessoais</b></h3>
+                    <span onclick="document.getElementById('editar_vaga').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
+                    <h3><b><i class="fa fa-pencil-square-o fa-fw w3-margin-right w3-xlarge"></i>Editar Vaga</b></h3>
                 </div>
 
                 <div class="w3-container w3-margin w3-text-black">
-                        <label><b>Nome</b></label>
-                        <input class="w3-input w3-margin-bottom" type="text" name="nome" value="Joana" required>
+                        <label><b>Tipo de Vaga</b></label>
+                        <input class="w3-input w3-margin-bottom" type="text" name="tipo" value="CLT" required>
 
-                        <label><b>Sobrenome</b></label>
-                        <input class="w3-input w3-margin-bottom" type="text" name="sobrenome" value="Matos"required>
+                        <label><b>Descrição</b></label>
+                        <textarea class="w3-input w3-margin-bottom" type="text" name="descricao" 
+                        style="height: 70px" required>Efetivo para desenvolvimento em PHP</textarea>
 
-                        <label><b>Data de Nascimento</b></label>
-                        <input class="w3-input w3-margin-bottom data" type="date" name="data_nascimento" value="12121992"required>
+                        <label><b>Salário</b></label>
+                        <input class="w3-input w3-margin-bottom dinheiro" type="text" name="salario" value="R$ 4.030,00" required>
 
-                        <label><b>CPF</b></label>
-                        <input class="w3-input w3-margin-bottom cpf" type="text" name="cpf" value="01234567899" required>
+                        <label><b>Horas</b></label>
+                        <input class="w3-input w3-margin-bottom" type="text" name="horas" 
+                        value="40h semanais, com horário de trabalho à combinar"required>
+
+                        <label><b>Benéficios</b></label>
+                        <textarea class="w3-input w3-margin-bottom" type="text" name="beneficios" 
+                        style="height: 70px" required>Vale-Transporte (R$ 7,00 ao dia) e Vale-Alimentação (R$ 500,00)</textarea>
                         
-                        <label><b>Telefone</b></label>
-                        <input class="w3-input w3-margin-bottom tel" type="tel" name="telefone" value="84940028922" required>
-
-                        <label><b>E-mail</b></label>
-                        <input class="w3-input w3-margin-bottom" type="email" name="email" value="email@w3.com" required>
-
-                        <label><b>Senha</b></label>
-                        <input class="w3-input" type="password" name="psw" value="12345678" required>
-
-                        <label><b>Cidade</b></label>
-                        <input class="w3-input" type="text" name="cidade" value="Natal, RN">
+                        <label><b>Período</b></label>
+                        <div class="w3-bar">
+                            <label class="w3-bar-item">De </label>
+                            <input class="w3-bar-item w3-border w3-input data" type="text" style="width:30%" placeholder="dd/mm/aaaa" value="13/05/2018">
+                            <label class="w3-bar-item"> à </label>
+                            <input class="w3-bar-item w3-border w3-input data" type="text" style="width:30%" placeholder="dd/mm/aaaa" value="16/06/2018">
+                        </div><br>
                 </div>
 
                 <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                    <button onclick="document.getElementById('dados_pessoais_modal').style.display='none'" type="button" 
+                    <button onclick="document.getElementById('editar_vaga').style.display='none'" type="button" 
+                    class="w3-button w3-red">Cancelar</button>
+
+                    <button type="button" class="w3-button w3-green w3-right">Salvar</button>
+                </div>
+            </div>
+        </div>
+
+         <!-- Dados Empresariais Modal -->
+         <div id="dados_empresariais_modal" class="w3-modal w3-Montserrat">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-margin-bottom" style="max-width:600px">
+                
+                <div class="w3-center w3-border-bottom w3-light-grey"><br>
+                    <span onclick="document.getElementById('dados_empresariais_modal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
+                    <h3><b><i class="fa fa-user fa-fw w3-margin-right w3-xlarge"></i>Dados Empresariais</b></h3>
+                </div>
+
+                <div class="w3-container w3-margin w3-text-black">
+                        <label><b>Razão Social</b></label>
+                        <input class="w3-input w3-margin-bottom" type="text" name="razao_social" value="Google LLC" required>
+
+                        <label><b>Nome Fantasia</b></label>
+                        <input class="w3-input w3-margin-bottom" type="text" name="nome_fantasia" value="Google" required>
+
+                        <label><b>CNPJ</b></label>
+                        <input class="w3-input w3-margin-bottom cnpj" type="text" name="cnpj" value="01234567891011" required>
+                        
+                        <label><b>Telefone</b></label>
+                        <input class="w3-input w3-margin-bottom tel" type="tel" name="telefone" value="31921286800" required>
+
+                        <label><b>CEP</b></label>
+                        <input class="w3-input w3-margin-bottom cep" type="text" name="cep" value="30260070" required>
+
+                        <label><b>E-mail</b></label>
+                        <input class="w3-input w3-margin-bottom" type="email" name="email" value="contato@google.com" required>
+                        
+                        <label><b>Senha</b></label>
+                        <input class="w3-input" type="password" name="psw" value="12345667884" required>
+                </div>
+
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                    <button onclick="document.getElementById('editar_vaga').style.display='none'" type="button" 
                     class="w3-button w3-red">Cancelar</button>
 
                     <button type="button" class="w3-button w3-green w3-right">Salvar</button>
@@ -552,59 +632,6 @@
 
                 <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
                     <button onclick="document.getElementById('experiencia_modal').style.display='none'" type="button" 
-                    class="w3-button w3-red">Cancelar</button>
-
-                    <button type="button" class="w3-button w3-green w3-right">Salvar</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Idioma Modal -->
-        <div id="idiomas_modal" class="w3-modal w3-Montserrat">
-            <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-margin-bottom" style="max-width:600px">
-
-                <div class="w3-center w3-border-bottom w3-light-grey"><br>
-                    <span onclick="document.getElementById('idiomas_modal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
-                    <h3><b><i class="fa fa-language fa-fw w3-margin-right w3-xlarge"></i>Idiomas</b></h3>
-                </div>
-
-                <div class="w3-container w3-margin w3-text-black">
-                    
-                    <label><b>Novo Idioma:</b></label>
-                    <input id="novo_idioma" class="w3-border w3-input" type="text"><br>
-                    <div class="w3-bar">
-                        <input id="nivel" class="w3-radio w3-bar-item" type="radio" name="nivel" value="Básico" checked>
-                        <label class="w3-bar-item">Básico</label>
-                        <input id="nivel" class="w3-radio w3-bar-item" type="radio" name="nivel" value="Intermediário">
-                        <label class="w3-bar-item">Intermediário</label>
-                        <input id="nivel" class="w3-radio w3-bar-item" type="radio" name="nivel" value="Avançado">
-                        <label class="w3-bar-item">Avançado</label>
-                        <button class="w3-bar-item w3-button w3-right w3-large w3-hover-green" title="Adicionar" onclick="add_idioma('lista_idiomas', 'novo_idioma', 'nivel')">
-                            <i class="fa fa-plus fa-fw w3-large"></i>           
-                        </button>
-                    </div><br>
-
-                    <ul id="lista_idiomas" class="w3-ul w3-border">
-                        <li class="w3-display-container">Português Brasil - Avançado
-                            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">
-                                &times;</span>    
-                        </li>
-                        
-                        <li class="w3-display-container">Inglês - Avançado
-                            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">
-                                &times;</span>
-                        </li>
-
-                        <li class="w3-display-container">Espanhol - Intermediário
-                            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">
-                                &times;</span>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                    <button onclick="document.getElementById('idiomas_modal').style.display='none'" type="button" 
                     class="w3-button w3-red">Cancelar</button>
 
                     <button type="button" class="w3-button w3-green w3-right">Salvar</button>
