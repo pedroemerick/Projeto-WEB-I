@@ -181,20 +181,25 @@
 
                             <!-- Vagas Cadastradas -->
                             <div class="w3-bar">
-                                <button name="experiencia_btn" class=" w3-bar-item w3-button w3-block w3-left-align w3-large" onclick="mostrar('experiencia', 'experiencia_seta')">
+                                <button name="experiencia_btn" class=" w3-bar-item w3-button w3-block w3-left-align w3-large" onclick="mostrar('vagas', 'vagas_seta')">
                                     <b><i class="fa fa-briefcase fa-fw w3-margin-right w3-xlarge"></i>Vagas Cadastradas
-                                        <i id="experiencia_seta" class="fa fa-chevron-down fa-fw w3-margin-right w3-large"></i></b>           
+                                        <i id="vagas_seta" class="fa fa-chevron-down fa-fw w3-margin-right w3-large"></i></b>           
                                 </button>
                                 <button class="w3-bar-item w3-button w3-right w3-large" title="Editar"
-                                onclick="document.getElementById('experiencia_modal').style.display='block'">
+                                onclick="document.getElementById('vagas_modal').style.display='block'">
                                     <i class="fa fa-pencil-square-o fa-fw w3-large"></i>           
                                 </button>
                             </div>
                             
-                            <div id="experiencia" class="w3-hide">
-                                <h5 class="w3-Montserrat">Desenvolvedor Web</h5>
-                                <h6 class="w3-Montserrat"><i class="fa fa-calendar fa-fw w3-margin-right w3-large"></i>Junho 2016 - Março 2017</h6>
-                                <p>Bolsista de desenvolvimento front end no Instituto Metrópole Digital - UFRN</p>
+                            <div id="vagas" class="w3-hide">
+                                <h5>CLT</h5>
+                                <h6><i class="fa fa-calendar fa-fw w3-margin-right w3-large"></i>13/05/2018 - 16/06/2018</h6>
+                                <p>Efetivo para desenvolvimento em PHP</p>
+
+                                <h5>Estágio</h5>
+                                <h6><i class="fa fa-calendar fa-fw w3-margin-right w3-large"></i>12/04/2018 - 01/05/2018</h6>
+                                <p>Estágio para desenvolvimento em C++</p>
+                                <br>
                             </div>
 
                         </div><br>
@@ -225,10 +230,10 @@
                         </div>
                     </div>
 
-                    <!-- Vagas Cadastradas -->
+                    <!-- Vagas em Andamento -->
                     <div class="w3-container w3-card-4 w3-white w3-margin-bottom">
                         <div class="w3-bar">
-                            <span class="w3-Montserrat w3-bar-item w3-xlarge w3-padding-16"><i class="fa fa-briefcase fa-fw w3-margin-right"></i>Vagas Cadastradas</span>
+                            <span class="w3-Montserrat w3-bar-item w3-xlarge w3-padding-16"><i class="fa fa-spinner fa-fw w3-margin-right"></i>Vagas em Andamento</span>
                             <a href="#" class="w3-button w3-bar-item w3-black w3-right w3-margin-top"><i class="fa fa-search fa-fw"></i></a>
                             <input type="text" class="w3-input w3-bar-item w3-right w3-border w3-margin-top w3-margin-right" placeholder="Busca" style="width: 20%">
                         </div>
@@ -236,7 +241,7 @@
                         <div class="w3-container">
                             <ul class="w3-ul">
                                 <li class="w3-button w3-block w3-left-align" onclick="document.getElementById('vaga_google').style.display='block'">
-                                        <h5 class="w3-Montserrat"><b>CLT</b> - Google</h5>
+                                        <h5 class="w3-Montserrat"><b>CLT</b></h5>
                                         <p>Efetivo para desenvolvimento em PHP</p>
                                 </li>
 
@@ -245,18 +250,18 @@
                         </div>
                     </div>
 
-                    <!-- Propostas para voce -->
+                    <!-- Vagas Encerradas -->
                     <div class="w3-container w3-card-4 w3-white">
                         <div class="w3-bar">
-                            <span class="w3-Montserrat w3-bar-item w3-xlarge w3-padding-16"><i class="fa fa-smile-o fa-fw w3-margin-right"></i>Propostas Para Você</span>
+                            <span class="w3-Montserrat w3-bar-item w3-xlarge w3-padding-16"><i class="fa fa-get-pocket fa-fw w3-margin-right"></i>Vagas Encerradas</span>
                             <a href="#" class="w3-button w3-bar-item w3-black w3-right w3-margin-top"><i class="fa fa-search fa-fw"></i></a>
                             <input type="text" class="w3-input w3-bar-item w3-right w3-border w3-margin-top w3-margin-right" placeholder="Busca" style="width: 20%">
                         </div>
 
                         <div class="w3-container">
                             <ul class="w3-ul">
-                                <li class="w3-button w3-block w3-left-align" onclick="document.getElementById('vaga_multi').style.display='block'">
-                                        <h5 class="w3-Montserrat"><b>Estágio</b> - MultiSoftware</h5>
+                                <li class="w3-button w3-block w3-left-align" onclick="document.getElementById('vaga_google_estagio').style.display='block'">
+                                        <h5 class="w3-Montserrat"><b>Estágio</b></h5>
                                         <p>Estágio para desenvolvimento em Python</p>
                                 </li>
 
@@ -381,39 +386,13 @@
             </div>
         </div>
 
-        <!-- Vaga SINFO Modal -->
-        <div id="vaga_sinfo" class="w3-modal w3-Montserrat">
-            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
-            
-                <div class="w3-center w3-border-bottom w3-light-grey"><br>
-                    <span onclick="document.getElementById('vaga_sinfo').style.display='none'" class="w3-button w3-circle w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
-                    <h3>CLT<br>SINFO</h3>
-                </div>
-
-                <div class="w3-container w3-margin w3-text-black">
-                    <h6><b>Descrição:</b> Efetivo para desenvolvimento web front end</h6>
-                    <h6><b>Salário:</b> À combinar</h6>
-                    <h6><b>Horas:</b> 40h semanais, com horário de trabalho à combinar</h6>
-                    <h6><b>Benéficios:</b> Vale-Transporte (R$ 7,00 ao dia) e Vale-Alimentação (R$ 350,00)</h6>
-                    <h6><b>Edital: </b><a href=#>Link</a></h6>
-                </div>
-
-                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                    <button onclick="document.getElementById('vaga_sinfo').style.display='none'" type="button" 
-                    class="w3-button w3-red">Cancelar</button>
-
-                    <button type="button" class="w3-button w3-green w3-right">Candidatar-me</button>
-                </div>
-            </div>
-        </div>
-
         <!-- Vaga Google Modal -->
         <div id="vaga_google" class="w3-modal w3-Montserrat">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-margin-bottom" style="max-width:800px">
             
                 <div class="w3-center w3-border-bottom w3-light-grey"><br>
                     <span onclick="document.getElementById('vaga_google').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
-                    <h3>CLT<br>Google</h3>
+                    <h3>CLT</h3>
                 </div>
 
                 <div class="w3-container w3-margin w3-text-black">
@@ -445,6 +424,44 @@
             </div>
         </div>
 
+        <!-- Vaga Google Estagio Modal -->
+        <div id="vaga_google_estagio" class="w3-modal w3-Montserrat">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-margin-bottom" style="max-width:800px">
+            
+                <div class="w3-center w3-border-bottom w3-light-grey"><br>
+                    <span onclick="document.getElementById('vaga_google_estagio').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
+                    <h3>Estágio</h3>
+                </div>
+
+                <div class="w3-container w3-margin w3-text-black">
+                    <h6><b>Descrição:</b> Estágio para desenvolvimento em C++</h6>
+                    <h6><b>Salário:</b> R$ 1010,00</h6>
+                    <h6><b>Horas:</b> 20h semanais, com horário de trabalho à combinar</h6>
+                    <h6><b>Benéficios:</b> Vale-Transporte (R$ 7,00 ao dia)</h6>
+                    <h6><b>Edital: </b><a href=#>Link</a></h6>
+                    <h6><b>Período:</b> 12/04/2018 - 01/05/2018</h6>
+                    <!-- <br> -->
+
+                    <!-- <h6><b>Contratado: </b></h6>
+                    <ul class="w3-ul">
+                        <li class="w3-bar w3-button w3-block w3-left-align">    
+                            <img src="./img/user.png" class="w3-bar-item w3-round w3-margin-top w3-hide-small" style="width:18%">
+                            <div class="w3-bar-item">
+                                <h5 class="w3-Montserrat"><b>Rodrigo Alves</b></h5>
+                                <p>Desenvolve em C, C++ e Java</p>
+                            </div>
+                        </li>
+                        <br>
+                    </ul> -->
+                </div>
+
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                    <button type="button" class="w3-button w3-red">Remover</button>
+                    <button type="button" class="w3-button w3-green w3-right">Reabrir Vaga</button>
+                </div>
+            </div>
+        </div>
+
         <!-- Editar Vaga-->
         <div id="editar_vaga" class="w3-modal w3-Montserrat">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-margin-bottom" style="max-width:600px">
@@ -455,25 +472,26 @@
                 </div>
 
                 <div class="w3-container w3-margin w3-text-black">
-                        <label><b>Tipo de Vaga</b></label>
-                        <input class="w3-input w3-margin-bottom" type="text" name="tipo" value="CLT" required>
+                        <label class="w3-text-red w3-right">* Campos Obrigatórios</label><br>
+                        <label><b>Tipo de Vaga</b> <span class="w3-text-red">*</span></label>
+                        <input class="w3-input w3-margin-bottom w3-border" type="text" name="tipo" value="CLT" required>
 
-                        <label><b>Descrição</b></label>
-                        <textarea class="w3-input w3-margin-bottom" type="text" name="descricao" 
+                        <label><b>Descrição</b> <span class="w3-text-red">*</span></label>
+                        <textarea class="w3-input w3-margin-bottom w3-border" type="text" name="descricao" 
                         style="height: 70px" required>Efetivo para desenvolvimento em PHP</textarea>
 
                         <label><b>Salário</b></label>
-                        <input class="w3-input w3-margin-bottom dinheiro" type="text" name="salario" value="R$ 4.030,00" required>
+                        <input class="w3-input w3-margin-bottom dinheiro w3-border" type="text" name="salario" value="R$ 4.030,00" required>
 
-                        <label><b>Horas</b></label>
-                        <input class="w3-input w3-margin-bottom" type="text" name="horas" 
+                        <label><b>Horas</b> <span class="w3-text-red">*</span></label>
+                        <input class="w3-input w3-margin-bottom w3-border" type="text" name="horas" 
                         value="40h semanais, com horário de trabalho à combinar"required>
 
                         <label><b>Benéficios</b></label>
-                        <textarea class="w3-input w3-margin-bottom" type="text" name="beneficios" 
+                        <textarea class="w3-input w3-margin-bottom w3-border" type="text" name="beneficios" 
                         style="height: 70px" required>Vale-Transporte (R$ 7,00 ao dia) e Vale-Alimentação (R$ 500,00)</textarea>
                         
-                        <label><b>Período</b></label>
+                        <label><b>Período</b> <span class="w3-text-red">*</span></label>
                         <div class="w3-bar">
                             <label class="w3-bar-item">De </label>
                             <input class="w3-bar-item w3-border w3-input data" type="text" style="width:30%" placeholder="dd/mm/aaaa" value="13/05/2018">
@@ -501,26 +519,27 @@
                 </div>
 
                 <div class="w3-container w3-margin w3-text-black">
-                        <label><b>Razão Social</b></label>
-                        <input class="w3-input w3-margin-bottom" type="text" name="razao_social" value="Google LLC" required>
+                    <label class="w3-text-red w3-right">* Campos Obrigatórios</label><br>
+                    <label><b>Razão Social <span class="w3-text-red">*</span></b></label>
+                    <input class="w3-input w3-margin-bottom w3-border" type="text" name="razao_social" value="Google LLC" required>
 
-                        <label><b>Nome Fantasia</b></label>
-                        <input class="w3-input w3-margin-bottom" type="text" name="nome_fantasia" value="Google" required>
+                    <label><b>Nome Fantasia <span class="w3-text-red">*</span></b></label>
+                    <input class="w3-input w3-margin-bottom w3-border" type="text" name="nome_fantasia" value="Google" required>
 
-                        <label><b>CNPJ</b></label>
-                        <input class="w3-input w3-margin-bottom cnpj" type="text" name="cnpj" value="01234567891011" required>
-                        
-                        <label><b>Telefone</b></label>
-                        <input class="w3-input w3-margin-bottom tel" type="tel" name="telefone" value="31921286800" required>
+                    <label><b>CNPJ <span class="w3-text-red">*</span></b></label>
+                    <input class="w3-input w3-margin-bottom cnpj w3-border" type="text" name="cnpj" value="01234567891011" required>
+                    
+                    <label><b>Telefone <span class="w3-text-red">*</span></b></label>
+                    <input class="w3-input w3-margin-bottom tel w3-border" type="tel" name="telefone" value="31921286800" required>
 
-                        <label><b>CEP</b></label>
-                        <input class="w3-input w3-margin-bottom cep" type="text" name="cep" value="30260070" required>
+                    <label><b>CEP</b> <span class="w3-text-red">*</span></label>
+                    <input class="w3-input w3-margin-bottom cep w3-border" type="text" name="cep" value="30260070" required>
 
-                        <label><b>E-mail</b></label>
-                        <input class="w3-input w3-margin-bottom" type="email" name="email" value="contato@google.com" required>
-                        
-                        <label><b>Senha</b></label>
-                        <input class="w3-input" type="password" name="psw" value="12345667884" required>
+                    <label><b>E-mail</b> <span class="w3-text-red">*</span></label>
+                    <input class="w3-input w3-margin-bottom w3-border" type="email" name="email" value="contato@google.com" required>
+                    
+                    <label><b>Senha</b> <span class="w3-text-red">*</span></label>
+                    <input class="w3-input w3-border" type="password" name="psw" value="12345667884" required>
                 </div>
 
                 <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
@@ -532,99 +551,60 @@
             </div>
         </div>
 
-        <!-- Linguagens Modal -->
-        <div id="linguagens_modal" class="w3-modal w3-Montserrat">
+         <!-- Vagas Modal -->
+        <div id="vagas_modal" class="w3-modal w3-Montserrat">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-margin-bottom" style="max-width:600px">
 
                 <div class="w3-center w3-border-bottom w3-light-grey"><br>
-                    <span onclick="document.getElementById('linguagens_modal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
-                    <h3><b><i class="devicon-devicon-plain fa-fw w3-margin-right w3-xlarge"></i> Linguagens</b></h3>
+                    <span onclick="document.getElementById('vagas_modal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
+                    <h3><b><i class="fa fa-briefcase fa-fw w3-margin-right w3-xlarge"></i>Vagas Cadastradas</b></h3>
                 </div>
 
                 <div class="w3-container w3-margin w3-text-black">
+                    <label class="w3-text-red w3-right">* Campos Obrigatórios</label>
+                    <label><b>Nova Vaga:</b></label><br><br>
+                    <label><b>Tipo de Vaga</b> <span class="w3-text-red">*</span></label>
+                    <input id="tipo_vaga" class="w3-input w3-margin-bottom w3-border" type="text" name="tipo" required>
+
+                    <label><b>Descrição</b> <span class="w3-text-red">*</span></label>
+                    <textarea id="descricao_vaga" class="w3-input w3-margin-bottom w3-border" type="text" name="descricao" 
+                    style="height: 70px" required></textarea>
+
+                    <label><b>Salário</b></label>
+                    <input id="salario_vaga" class="w3-input w3-margin-bottom dinheiro w3-border" type="text" name="salario" required>
+
+                    <label><b>Horas</b> <span class="w3-text-red">*</span></label>
+                    <input id="horas_vaga" class="w3-input w3-margin-bottom w3-border" type="text" name="horas" required>
+
+                    <label><b>Benéficios</b> </label>
+                    <textarea id="beneficios_vaga" class="w3-input w3-margin-bottom w3-border" type="text" name="beneficios" 
+                    style="height: 70px" required></textarea>
                     
-                    <label><b>Nova Linguagem:</b></label>
-                    <div class="w3-bar">
-                        <input id="nova_linguagem" class="w3-bar-item w3-border w3-input" type="text" style="width:89%">
-                        <button class="w3-bar-item w3-button w3-right w3-large w3-hover-green" title="Adicionar" onclick="add_linguagem('lista_linguagens', 'nova_linguagem')">
-                            <i class="fa fa-plus fa-fw w3-large"></i>           
-                        </button>
-                    </div><br>
-
-                    <ul id="lista_linguagens" class="w3-ul w3-border">
-                        <li class="w3-display-container"><i class="devicon-html5-plain fa-fw w3-margin-right w3-large"></i>HTML
-                            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">
-                                &times;</span>    
-                        </li>
-                        
-                        <li class="w3-display-container"><i class="devicon-css3-plain fa-fw w3-margin-right w3-large"></i>CSS
-                            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">
-                                &times;</span>
-                        </li>
-
-                        <li class="w3-display-container"><i class="devicon-javascript-plain fa-fw w3-margin-right w3-large"></i>JavaScript
-                            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">
-                                &times;</span>
-                        </li>
-
-                        <li class="w3-display-container"><i class="devicon-php-plain fa-fw w3-margin-right w3-large"></i>PHP
-                            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">
-                                &times;</span>
-                        </li>
-
-                        <li class="w3-display-container"><i class="devicon-python-plain fa-fw w3-margin-right w3-large"></i>Python
-                            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">
-                                &times;</span>
-                        </li>
-
-                        <!-- <li class="w3-display-container"><i class="devicon-c-plain fa-fw w3-margin-right w3-large"></i>c<span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">&times;</span></li> -->
-                    </ul>
-                </div>
-
-                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                    <button onclick="document.getElementById('linguagens_modal').style.display='none'" type="button" 
-                    class="w3-button w3-red">Cancelar</button>
-
-                    <button type="button" class="w3-button w3-green w3-right">Salvar</button>
-                </div>
-            </div>
-        </div>
-
-         <!-- Experiencia Modal -->
-        <div id="experiencia_modal" class="w3-modal w3-Montserrat">
-            <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-margin-bottom" style="max-width:600px">
-
-                <div class="w3-center w3-border-bottom w3-light-grey"><br>
-                    <span onclick="document.getElementById('experiencia_modal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Fechar">&times;</span>
-                    <h3><b><i class="fa fa-briefcase fa-fw w3-margin-right w3-xlarge"></i>Experiência</b></h3>
-                </div>
-
-                <div class="w3-container w3-margin w3-text-black">
-                    
-                    <label><b>Nova Experiência:</b></label><br><br>
-                    <label><b>Cargo/Função</b></label>
-                    <input id="cargo" class="w3-input w3-margin-bottom w3-border" type="text" name="cargo">
-                    <label><b>Duração</b></label>
+                    <label><b>Período</b> <span class="w3-text-red">*</span></label>
                     <div class="w3-bar">
                         <label class="w3-bar-item">De </label>
-                        <input id="inicio" class="w3-bar-item w3-border w3-input duracao" type="text" style="width:30%" placeholder="mm/aaaa">
+                        <input id="inicio_periodo" class="w3-bar-item w3-border w3-input data" type="text" style="width:30%" placeholder="dd/mm/aaaa">
                         <label class="w3-bar-item"> à </label>
-                        <input id="fim" class="w3-bar-item w3-border w3-input duracao" type="text" style="width:30%" placeholder="mm/aaaa">
-                    </div><br>
-                    <label><b>Breve Descrição</b></label>
-                    <div class="w3-bar">
-                        <textarea id="descricao" class="w3-bar-item w3-input w3-margin-bottom w3-border" type="text" name="descricao" style="height:70px; width: 89%"></textarea>
-                        <button class="w3-bar-item w3-button w3-right w3-large w3-margin-top w3-hover-green" title="Adicionar" onclick="add_experiencia('lista_experiencia', 'cargo', 'inicio', 'fim', 'descricao')">
+                        <input id="fim_periodo" class="w3-bar-item w3-border w3-input data" type="text" style="width:30%" placeholder="dd/mm/aaaa">
+                        <button class="w3-bar-item w3-button w3-right w3-large w3-hover-green" title="Adicionar" onclick="add_vaga('lista_vaga', 'cargo', 'inicio', 'fim', 'descricao')">
                             <i class="fa fa-plus fa-fw w3-large"></i>           
                         </button>
                     </div><br>
 
-                    <ul id="lista_experiencia" class="w3-ul w3-border">
-                        <li class="w3-display-container">Desenvolvedor WEB<br><br>
-                            <i class="fa fa-calendar fa-fw w3-margin-right w3-large"></i>Junho 2016 - Março 2017<br><br>
-                            Bolsista de desenvolvimento front end no Instituto Metrópole Digital - UFRN<br>
-                            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">
-                                &times;</span>    
+                    <ul id="lista_vagas" class="w3-ul w3-border">
+                        <li class="w3-display-container w3-button w3-block w3-left-align" onclick="document.getElementById('vaga_google').style.display='block';document.getElementById('vagas_modal').style.display='none'">
+                            CLT<br><br>
+                            <i class="fa fa-calendar fa-fw w3-margin-right w3-large"></i>13/05/2018 - 16/06/2018<br><br>
+                            Efetivo para desenvolvimento em PHP<br>
+                            <!-- <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">
+                                &times;</span>     -->
+                        </li>
+                        <li class="w3-display-container w3-button w3-block w3-left-align" onclick="document.getElementById('vaga_google_estagio').style.display='block';document.getElementById('vagas_modal').style.display='none'">
+                            Estágio<br><br>
+                            <i class="fa fa-calendar fa-fw w3-margin-right w3-large"></i>12/04/2018 - 01/05/2018<br><br>
+                            Estágio para desenvolvimento em C++<br>
+                            <!-- <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right w3-hover-red" title="Remover">
+                                &times;</span>     -->
                         </li>
 
                     </ul>

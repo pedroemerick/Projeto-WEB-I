@@ -422,29 +422,38 @@
                 </div>
 
                 <div class="w3-container w3-margin w3-text-black">
-                        <label><b>Nome</b></label>
-                        <input class="w3-input w3-margin-bottom" type="text" name="nome" value="Joana" required>
+                        <label class="w3-text-red w3-right">* Campos Obrigatórios</label><br>
+                        <label><b>Nome</b> <span class="w3-text-red">*</span></label>
+                        <input class="w3-input w3-margin-bottom w3-border" type="text" name="nome" value="Joana" required>
 
-                        <label><b>Sobrenome</b></label>
-                        <input class="w3-input w3-margin-bottom" type="text" name="sobrenome" value="Matos"required>
+                        <label><b>Sobrenome</b> <span class="w3-text-red">*</span></label>
+                        <input class="w3-input w3-margin-bottom w3-border" type="text" name="sobrenome" value="Matos"required>
 
-                        <label><b>Data de Nascimento</b></label>
-                        <input class="w3-input w3-margin-bottom data" type="date" name="data_nascimento" value="12121992"required>
+                        <label><b>Data de Nascimento</b> <span class="w3-text-red">*</span></label>
+                        <input class="w3-input w3-margin-bottom data w3-border" type="date" name="data_nascimento" value="12121992"required>
 
-                        <label><b>CPF</b></label>
-                        <input class="w3-input w3-margin-bottom cpf" type="text" name="cpf" value="01234567899" required>
+                        <label><b>CPF</b> <span class="w3-text-red">*</span></label>
+                        <input class="w3-input w3-margin-bottom cpf w3-border" type="text" name="cpf" value="01234567899" required>
+
+                        <label><b>Sexo</b></label>
+                        <div class="w3-bar w3-margin-bottom">
+                            <input id="sexo" class="w3-radio w3-bar-item" type="radio" name="sexo" value="Masculino">
+                            <label class="w3-bar-item">Masculino</label>
+                            <input id="sexo" class="w3-radio w3-bar-item" type="radio" name="sexo" value="Feminino" checked>
+                            <label class="w3-bar-item">Feminino</label>
+                        </div>
                         
-                        <label><b>Telefone</b></label>
-                        <input class="w3-input w3-margin-bottom tel" type="tel" name="telefone" value="84940028922" required>
-
-                        <label><b>E-mail</b></label>
-                        <input class="w3-input w3-margin-bottom" type="email" name="email" value="email@w3.com" required>
-
-                        <label><b>Senha</b></label>
-                        <input class="w3-input" type="password" name="psw" value="12345678" required>
+                        <label><b>Telefone</b> <span class="w3-text-red">*</span></label>
+                        <input class="w3-input w3-margin-bottom tel w3-border" type="tel" name="telefone" value="84940028922" required>
 
                         <label><b>Cidade</b></label>
-                        <input class="w3-input" type="text" name="cidade" value="Natal, RN">
+                        <input class="w3-input w3-border w3-margin-bottom" type="text" name="cidade" value="Natal, RN">
+
+                        <label><b>E-mail</b> <span class="w3-text-red">*</span></label>
+                        <input class="w3-input w3-margin-bottom w3-border" type="email" name="email" value="email@w3.com" required>
+
+                        <label><b>Senha</b> <span class="w3-text-red">*</span></label>
+                        <input class="w3-input w3-border" type="password" name="psw" value="12345678" required>
                 </div>
 
                 <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
@@ -466,8 +475,8 @@
                 </div>
 
                 <div class="w3-container w3-margin w3-text-black">
-                    
-                    <label><b>Nova Linguagem:</b></label>
+                    <label class="w3-text-red w3-right">* Campos Obrigatórios</label><br>
+                    <label><b>Nova Linguagem:</b> <span class="w3-text-red">*</span></label>
                     <div class="w3-bar">
                         <input id="nova_linguagem" class="w3-bar-item w3-border w3-input" type="text" style="width:89%">
                         <button class="w3-bar-item w3-button w3-right w3-large w3-hover-green" title="Adicionar" onclick="add_linguagem('lista_linguagens', 'nova_linguagem')">
@@ -524,18 +533,18 @@
                 </div>
 
                 <div class="w3-container w3-margin w3-text-black">
-                    
+                    <label class="w3-text-red w3-right">* Campos Obrigatórios</label>
                     <label><b>Nova Experiência:</b></label><br><br>
-                    <label><b>Cargo/Função</b></label>
+                    <label><b>Cargo/Função</b> <span class="w3-text-red">*</span></label>
                     <input id="cargo" class="w3-input w3-margin-bottom w3-border" type="text" name="cargo">
-                    <label><b>Duração</b></label>
+                    <label><b>Duração</b> <span class="w3-text-red">*</span></label>
                     <div class="w3-bar">
                         <label class="w3-bar-item">De </label>
                         <input id="inicio" class="w3-bar-item w3-border w3-input duracao" type="text" style="width:30%" placeholder="mm/aaaa">
                         <label class="w3-bar-item"> à </label>
                         <input id="fim" class="w3-bar-item w3-border w3-input duracao" type="text" style="width:30%" placeholder="mm/aaaa">
                     </div><br>
-                    <label><b>Breve Descrição</b></label>
+                    <label><b>Breve Descrição</b> <span class="w3-text-red">*</span></label>
                     <div class="w3-bar">
                         <textarea id="descricao" class="w3-bar-item w3-input w3-margin-bottom w3-border" type="text" name="descricao" style="height:70px; width: 89%"></textarea>
                         <button class="w3-bar-item w3-button w3-right w3-large w3-margin-top w3-hover-green" title="Adicionar" onclick="add_experiencia('lista_experiencia', 'cargo', 'inicio', 'fim', 'descricao')">
@@ -573,10 +582,11 @@
                 </div>
 
                 <div class="w3-container w3-margin w3-text-black">
-                    
-                    <label><b>Novo Idioma:</b></label>
-                    <input id="novo_idioma" class="w3-border w3-input" type="text"><br>
-                    <div class="w3-bar">
+                    <label class="w3-text-red w3-right">* Campos Obrigatórios</label><br>
+                    <label><b>Novo Idioma:</b> <span class="w3-text-red">*</span></label>
+                    <input id="novo_idioma" class="w3-border w3-input" type="text">
+                    <div class="w3-bar w3-margin-bottom w3-margin-top">
+                        <label class="w3-bar-item"> </label>
                         <input id="nivel" class="w3-radio w3-bar-item" type="radio" name="nivel" value="Básico" checked>
                         <label class="w3-bar-item">Básico</label>
                         <input id="nivel" class="w3-radio w3-bar-item" type="radio" name="nivel" value="Intermediário">
@@ -586,7 +596,7 @@
                         <button class="w3-bar-item w3-button w3-right w3-large w3-hover-green" title="Adicionar" onclick="add_idioma('lista_idiomas', 'novo_idioma', 'nivel')">
                             <i class="fa fa-plus fa-fw w3-large"></i>           
                         </button>
-                    </div><br>
+                    </div>
 
                     <ul id="lista_idiomas" class="w3-ul w3-border">
                         <li class="w3-display-container">Português Brasil - Avançado
